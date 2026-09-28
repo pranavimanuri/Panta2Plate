@@ -1,0 +1,550 @@
+/**
+ * Panta2Plate - Component Library
+ * Spacious, tactile, farmer-first controls with minimum 52px touch targets
+ */
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: var(--touch-min);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+  color: white;
+  box-shadow: 0 4px 14px rgba(18, 127, 68, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  box-shadow: 0 6px 18px rgba(18, 127, 68, 0.45);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--amber-500), var(--amber-600));
+  color: white;
+  box-shadow: 0 4px 14px rgba(237, 141, 17, 0.35);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-warm);
+  border-color: var(--primary-400);
+}
+
+.btn-danger {
+  background: #fef2f2;
+  color: var(--status-error);
+  border: 1.5px solid #fecaca;
+}
+
+.btn-danger:hover {
+  background: var(--status-error);
+  color: white;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-lg {
+  min-height: 58px;
+  font-size: 18px;
+  padding: 14px 28px;
+  border-radius: var(--radius-lg);
+}
+
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+/* Audio Voice Speaker Button */
+.speaker-btn {
+  background: #eef8f2;
+  color: var(--primary-700);
+  border: 1.5px solid var(--primary-200);
+  border-radius: var(--radius-full);
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.speaker-btn:hover {
+  background: var(--primary-600);
+  color: white;
+  border-color: var(--primary-600);
+}
+
+.speaker-btn.speaking {
+  background: var(--primary-600);
+  color: white;
+  animation: pulseSpeaking 1.2s infinite;
+}
+
+@keyframes pulseSpeaking {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(26, 158, 87, 0.4); }
+  70% { transform: scale(1.06); box-shadow: 0 0 0 10px rgba(26, 158, 87, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(26, 158, 87, 0); }
+}
+
+/* ==========================================================================
+   Cards & Containers
+   ========================================================================== */
+.card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.card-warm {
+  background: var(--bg-warm);
+  border-color: #ebdcc9;
+}
+
+.card-highlight {
+  background: linear-gradient(135deg, #f0fbf4, #e3f6ea);
+  border: 1.5px solid var(--primary-300);
+}
+
+.card-hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-400);
+}
+
+/* ==========================================================================
+   Header Bar
+   ========================================================================== */
+.app-header {
+  padding: 16px 20px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar-img {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid var(--primary-500);
+}
+
+.header-meta h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.header-meta p {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   Mandi Rate Ticker (Live Market Insights for Farmers)
+   ========================================================================== */
+.mandi-ticker {
+  background: #fdf8eb;
+  border: 1px solid #f6e1b2;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mandi-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--amber-700);
+}
+
+.mandi-rates-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.mandi-badge {
+  background: white;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid #fae6c3;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Tactile Quantity Stepper
+   ========================================================================== */
+.stepper-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.stepper-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  border: 2px solid var(--border-light);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.stepper-btn:hover {
+  background: var(--primary-600);
+  color: white;
+  border-color: var(--primary-600);
+}
+
+.stepper-btn:active {
+  transform: scale(0.92);
+}
+
+.stepper-value-box {
+  min-width: 140px;
+  text-align: center;
+  padding: 10px 16px;
+  background: var(--bg-surface);
+  border: 2px solid var(--primary-500);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.stepper-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-800);
+  line-height: 1;
+}
+
+.stepper-unit {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Quick Increment Chips */
+.quick-chips-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.quick-chip {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-light);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.quick-chip:hover, .quick-chip.active {
+  background: var(--primary-100);
+  border-color: var(--primary-600);
+  color: var(--primary-800);
+}
+
+/* ==========================================================================
+   Voice Assistant Speech Bubble
+   ========================================================================== */
+.speech-bubble-toast {
+  position: fixed;
+  bottom: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 36px);
+  max-width: 440px;
+  background: #11281b;
+  color: white;
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  z-index: 90;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideUpToast 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUpToast {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.speech-bubble-icon {
+  background: var(--primary-500);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.speech-bubble-content {
+  flex: 1;
+}
+
+.speech-bubble-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.speech-bubble-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-300);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.speech-bubble-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #e5f5eb;
+  font-weight: 500;
+}
+
+.speech-bubble-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 4px;
+}
+
+/* ==========================================================================
+   Bottom Navigation Bar
+   ========================================================================== */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 12px 14px 12px;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+  z-index: 60;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+.nav-item svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2.2;
+}
+
+.nav-item.active {
+  color: var(--primary-700);
+}
+
+.nav-item.active svg {
+  stroke: var(--primary-700);
+}
+
+/* ==========================================================================
+   Modals & Bottom Sheet
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 25, 18, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.bottom-sheet {
+  background: var(--bg-surface);
+  width: 100%;
+  max-width: 480px;
+  border-radius: 28px 28px 0 0;
+  padding: 24px 20px 32px 20px;
+  box-shadow: var(--shadow-xl);
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.sheet-handle {
+  width: 44px;
+  height: 5px;
+  background: var(--border-light);
+  border-radius: 10px;
+  margin: 0 auto 16px auto;
+}
+
+/* ==========================================================================
+   Notification Toast
+   ========================================================================== */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 440px;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast-item {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  border-left: 5px solid var(--primary-600);
+  pointer-events: auto;
+  animation: toastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.toast-header {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.toast-body {
+  font-size: 13px;
+  color: var(--text-secondary);
+}

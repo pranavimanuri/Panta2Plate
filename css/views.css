@@ -1,0 +1,690 @@
+/**
+ * Panta2Plate - View Specific Styles
+ * Clean, uncluttered, spacious layouts optimized for fast human-centered interaction
+ */
+
+/* ==========================================================================
+   1. Onboarding & Role Selection
+   ========================================================================== */
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 4px;
+}
+
+.brand-splash-header {
+  text-align: center;
+  padding: 16px 0 8px 0;
+}
+
+.brand-icon-large {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+  color: white;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 20px rgba(18, 127, 68, 0.35);
+}
+
+.brand-splash-header h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-900);
+}
+
+.brand-splash-header p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Language Selection Grid */
+.lang-select-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.lang-big-card {
+  background: white;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-big-card:hover {
+  border-color: var(--primary-400);
+  background: var(--bg-warm);
+}
+
+.lang-big-card.active {
+  border-color: var(--primary-600);
+  background: var(--primary-50);
+  box-shadow: 0 4px 12px rgba(18, 127, 68, 0.15);
+}
+
+.lang-native-text {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.lang-sub-text {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Role Selection Cards */
+.role-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.role-card-item {
+  background: white;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 18px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.role-card-item:hover, .role-card-item.selected {
+  border-color: var(--primary-600);
+  background: #f4faf6;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.role-avatar-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+  background: #e9f6ee;
+}
+
+.role-card-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.role-card-info p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   2. Farmer Dashboard & Home
+   ========================================================================== */
+.farmer-hero-card {
+  background: linear-gradient(135deg, #106538, #0a4424);
+  color: white;
+  border-radius: var(--radius-xl);
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(16, 101, 56, 0.28);
+  margin-bottom: 20px;
+}
+
+.farmer-hero-card::after {
+  content: "🌾";
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  font-size: 100px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.farmer-hero-title {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.farmer-hero-sub {
+  font-size: 13px;
+  opacity: 0.9;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* Big Sell Crop CTA */
+.sell-crop-big-btn {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  border: none;
+  width: 100%;
+  min-height: 60px;
+  border-radius: var(--radius-lg);
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: inherit;
+}
+
+.sell-crop-big-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.5);
+}
+
+.sell-crop-big-btn:active {
+  transform: scale(0.98);
+}
+
+/* Quick Stats Row */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.stat-box {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 14px 10px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-number {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-800);
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Listing Feed Items */
+.listing-card-item {
+  background: white;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.listing-card-item:hover {
+  border-color: var(--primary-400);
+  box-shadow: var(--shadow-md);
+}
+
+.listing-thumb-img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.listing-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.listing-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listing-crop-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.listing-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.price-highlight {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--primary-700);
+}
+
+/* ==========================================================================
+   3. Crop Listing Wizard (Clean Step-by-Step)
+   ========================================================================== */
+.wizard-header {
+  margin-bottom: 20px;
+}
+
+.wizard-step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.step-pill-indicator {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-700);
+  background: var(--primary-100);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.wizard-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.wizard-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Photo Capture Box */
+.photo-capture-box {
+  background: #f5f9f6;
+  border: 2px dashed var(--primary-300);
+  border-radius: var(--radius-xl);
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 16px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-capture-box:hover {
+  background: #eaf5ee;
+  border-color: var(--primary-500);
+}
+
+.photo-preview-large {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.ai-detected-tag {
+  margin-top: 12px;
+  background: var(--status-success-bg);
+  color: var(--status-success);
+  border: 1px solid #bbf7d0;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Produce Selection Grid */
+.produce-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.produce-card-select {
+  background: white;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.produce-card-select:hover {
+  border-color: var(--primary-400);
+  background: var(--bg-warm);
+}
+
+.produce-card-select.selected {
+  border-color: var(--primary-600);
+  background: var(--primary-50);
+  box-shadow: 0 4px 12px rgba(18, 127, 68, 0.18);
+}
+
+.produce-card-img {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.produce-card-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Price Benchmark Box */
+.price-benchmark-card {
+  background: #fffbeb;
+  border: 1.5px solid #fde68a;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.price-benchmark-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #b45309;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.price-benchmark-text {
+  font-size: 12px;
+  color: #78350f;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   4. Supplier Views (Discovery, Radius Map & Inventory)
+   ========================================================================== */
+.supplier-map-card {
+  background: linear-gradient(135deg, #1e3a29, #14281c);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  color: white;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.radar-sweep-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(46, 204, 113, 0.2);
+  border: 2px solid #2ecc71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  animation: radarPulse 2s infinite ease-out;
+}
+
+@keyframes radarPulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.nearby-farmer-item {
+  background: white;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.nearby-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.farmer-tag {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.distance-tag {
+  background: #f0fbf4;
+  color: var(--primary-700);
+  border: 1px solid #c8ecd4;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   5. Restaurant Marketplace & Live Order Tracking
+   ========================================================================== */
+.search-filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.search-input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.search-input-field {
+  width: 100%;
+  height: 48px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-light);
+  padding: 0 16px 0 42px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  background: white;
+}
+
+.search-input-field:focus {
+  border-color: var(--primary-600);
+}
+
+.search-icon-pos {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+/* Supplier Comparison Grid */
+.comparison-card {
+  background: white;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.comparison-card:hover {
+  border-color: var(--primary-500);
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-top-row {
+  display: flex;
+  gap: 14px;
+}
+
+.comparison-img {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.comparison-details {
+  flex: 1;
+}
+
+.comparison-produce-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.comparison-supplier-name {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 2px 0 8px 0;
+}
+
+.comparison-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #f8faf9;
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  text-align: center;
+  gap: 6px;
+  margin-top: 12px;
+  border: 1px solid #e7efe9;
+}
+
+.metric-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+/* Live Order Tracker Timeline */
+.tracker-timeline {
+  margin: 24px 0;
+  position: relative;
+  padding-left: 28px;
+}
+
+.tracker-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: var(--border-light);
+}
+
+.timeline-step-item {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.timeline-step-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-node {
+  position: absolute;
+  left: -28px;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background: white;
+  border: 2.5px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.timeline-step-item.completed .timeline-node {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: white;
+}
+
+.timeline-step-item.active .timeline-node {
+  background: var(--amber-500);
+  border-color: var(--amber-500);
+  color: white;
+  animation: pulseNode 1.5s infinite;
+}
+
+@keyframes pulseNode {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.timeline-step-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-step-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}

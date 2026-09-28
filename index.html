@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Panta2Plate (పంట2ప్లేట్) - Farm-to-Fork Direct Supply Chain</title>
+  <meta name="description" content="Panta2Plate connects local Indian farmers directly with suppliers and restaurants. Multilingual, farmer-first UX with voice assistance and fair pricing." />
+  <meta name="theme-color" content="#127f44" />
+  
+  <!-- Google Fonts: Noto Sans Telugu & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/views.css" />
+</head>
+<body>
+  <!-- Presentation Viewport Container -->
+  <div class="presentation-wrapper">
+    <!-- Top Demo Toolbar (Floating for Hackathon presentation / Jury evaluation) -->
+    <div id="demoTopBarContainer"></div>
+
+    <!-- Mobile Device Frame Container -->
+    <main class="mobile-device-container" id="appMainFrame">
+      <!-- Dynamic App Header -->
+      <div id="appHeaderContainer"></div>
+
+      <!-- Main Scrollable Screen Body -->
+      <div class="app-screen-body" id="appScreenContainer"></div>
+
+      <!-- Bottom Navigation -->
+      <div id="bottomNavContainer"></div>
+    </main>
+
+    <!-- Visual Speech Bubble Caption Overlay -->
+    <div id="speechOverlayContainer"></div>
+
+    <!-- Notification Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+  </div>
+
+  <!-- Main ES Module Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
